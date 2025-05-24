@@ -5,6 +5,7 @@ public class PlayerReferences : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public int maxJumps;
     public Rigidbody2D rb;
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -27,4 +28,5 @@ public class PlayerReferences : MonoBehaviour
     public GameObject attackAreaPrefab;
     public Transform attackPoint;
     public float attackDuration = 0.2f;
+
 }
