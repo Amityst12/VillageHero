@@ -28,5 +28,6 @@ public class PlayerReferences : MonoBehaviour
     public GameObject attackAreaPrefab;
     public Transform attackPoint;
     public float attackDuration = 0.2f;
+    public float maxHealth = 100f;
 
 }
