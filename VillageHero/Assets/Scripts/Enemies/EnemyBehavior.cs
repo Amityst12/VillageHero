@@ -25,6 +25,10 @@ public class EnemyBehavior : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
+        // Flip לפי מיקום שחקן
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.flipX = player.position.x < transform.position.x;
+
         // התקרבות
         if (distance < detectionRange && distance > attackRange)
         {
