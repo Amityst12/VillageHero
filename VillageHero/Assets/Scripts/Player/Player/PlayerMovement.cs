@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
                 Physics2D.Raycast(refs.wallCheckLeftH.position, Vector2.left, refs.wallCheckDistance, refs.wallLayer);
 
             visual.localScale = new Vector3(-1, 1, 1);
-            animator.SetBool("isRunning", true);
+            if (animator != null)
+                animator.SetBool("isRunning", true);
 
             dustParticles.transform.localPosition = particleStartPos;
             dustParticles.transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -50,14 +51,16 @@ public class PlayerMovement : MonoBehaviour
                 Physics2D.Raycast(refs.wallCheckRightH.position, Vector2.right, refs.wallCheckDistance, refs.wallLayer);
 
             visual.localScale = new Vector3(1, 1, 1);
-            animator.SetBool("isRunning", true);
+            if (animator != null)
+                animator.SetBool("isRunning", true);
 
             dustParticles.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
             isTouchingWall = false;
-            animator.SetBool("isRunning", false);
+            if (animator != null)
+                animator.SetBool("isRunning", false);
         }
 
         if (Input.GetKeyDown(KeyCode.W) && (isGrounded || jumps > 0))
