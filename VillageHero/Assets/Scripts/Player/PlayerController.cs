@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheckL;
     public float groundCheckRadius = 0.05f;
 
-    //Walls collision
+    // Wall collision
     public Transform wallCheck;
     public float wallCheckDistance = 0.03f;
     public LayerMask wallLayer;
